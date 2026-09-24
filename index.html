@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Une surprise pour toi ❤️</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="lock-screen" class="lock-screen">
+      <div class="lock-box">
+        <div class="lock-icon">🔒</div>
+        <h2>Espace Privé ❤️</h2>
+        <p>Seul mon amour peut entrer ici.</p>
+        <p class="hint">Indice : Entre notre code secret</p>
+
+        <form onsubmit="checkPassword(event)">
+          <input
+            type="password"
+            id="password-input"
+            placeholder="Entre le code secret..."
+            required
+          />
+          <button type="submit" class="btn-primary">Déverrouiller ✨</button>
+        </form>
+
+        <p id="error-msg" class="error-msg"></p>
+      </div>
+    </div>
+
+    <div id="hearts-container"></div>
+
+    <div id="site-content" class="hidden-content">
+      <header class="hero">
+        <div class="hero-content">
+          <span class="badge">Aujourd'hui c'est ta journée 🎂</span>
+          <h1>Joyeux Anniversaire Baby ❤️</h1>
+          <p>Pour la personne qui illumine ma vie chaque jour.</p>
+        </div>
+      </header>
+
+      <main class="container">
+        <section class="card-section">
+          <h2>Une lettre juste pour toi 💌</h2>
+          <p class="subtitle">Clique sur l'enveloppe pour lire ton message</p>
+
+          <div class="envelope-wrapper" onclick="openEnvelope()">
+            <div class="envelope" id="envelope">
+              <div class="flap"></div>
+              <div class="pocket"></div>
+              <div class="letter" id="letter">
+                <h3>Baby,</h3>
+                <p>
+                  En ce jour si spécial, je tiens à te dire à quel point tu
+                  comptes pour moi. Merci d'être cette personne formidable,
+                  attentionnée et toujours présente.
+                </p>
+                <p>
+                  Que cette nouvelle année t'apporte la santé, le succès dans
+                  tous tes projets et d'immenses moments de bonheur. Je suis
+                  tellement fière d'être à tes côtés.
+                </p>
+                <p class="signature">Je t'aime de tout mon cœur ❤️</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="gallery-section">
+          <h2>Nous deux 👩‍❤️‍👨</h2>
+          <div class="single-photo-container">
+            <div class="polaroid large-polaroid">
+              <img src="./image/ivy.jpeg" alt="Nous deux" />
+              <p>Mon bonheur à tes côtés 💕</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="video-section">
+          <h2>Tes meilleurs pas de danse 🕺✨</h2>
+          <p class="subtitle">
+            Parce que ton énergie et ton sourire sont uniques
+          </p>
+          <div class="video-wrapper">
+            <video controls poster="./image/">
+              <source src="./video/ivy.mp4" type="video/mp4" />
+              Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+          </div>
+        </section>
+
+        <section class="reasons-section">
+          <h2>Pourquoi tu es unique pour moi 🥰</h2>
+          <div class="reason-box">
+            <p id="reason-text">
+              Clique sur le bouton pour découvrir une pensée pour toi !
+            </p>
+          </div>
+          <button class="btn-primary" onclick="generateReason()">
+            Découvrir un mot doux ❤️
+          </button>
+        </section>
+      </main>
+
+      <footer>
+        <p>
+          Fait avec tout mon amour pour toi ❤️ | Joyeux Anniversaire Une Fois De
+          Plus Baby
+        </p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
